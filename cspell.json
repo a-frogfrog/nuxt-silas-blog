@@ -1,0 +1,11 @@
+{
+  "words": [
+    "nuxt",
+    "nuxtjs",
+    "lucide"
+  ],
+  "ignoreWords": [
+    "**/node_modules/*",
+    "**/.nuxt/*"
+  ]
+}

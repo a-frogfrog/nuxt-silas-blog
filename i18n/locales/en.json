@@ -1,0 +1,15 @@
+{
+  "en": "English",
+  "zh": "Chinese",
+  "language": "Language",
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "projects": "Projects",
+    "me": "Me"
+  },
+  "home": {
+    "hi": "Hi, I am Silas or Froggy , you can call me"
+  }
+}
