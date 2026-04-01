@@ -4,8 +4,6 @@ import {
   NavMobile,
   NavMobileList,
   SmoothScroll,
-  Cursor,
-  CursorContainer,
   Logo,
   Header,
   LocaleSelect,
