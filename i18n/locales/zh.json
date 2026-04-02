@@ -8,7 +8,11 @@
   },
   "app": {
     "title": "Silas 的小窝",
-    "description": "关于 Silas 的小窝"
+    "description": "关于 Silas 的小窝",
+    "empty": {
+      "title": "这里还什么都没有",
+      "description": "敬请期待后面我的新内容"
+    }
   },
   "nav": {
     "home": "首页",

@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Empty } from '@/components'
+</script>
 
 <template>
-  <div>About</div>
+  <Empty />
 </template>
