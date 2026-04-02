@@ -15,7 +15,13 @@
     "blog": "博客",
     "about": "关于",
     "projects": "项目",
-    "me": "我"
+    "me": "我",
+    "mobile": {
+      "menu": {
+        "title": "菜单",
+        "description": "导航到博客的不同部分"
+      }
+    }
   },
   "home": {
     "hi": "你好，我是 Silas 或 Froggy , 你可以这样叫我"

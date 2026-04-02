@@ -1,6 +1,8 @@
 <script setup lang="ts">
-const { nav } = useNav()
+import { LocaleSelect } from '@/components'
+
 const { t } = useI18n()
+const { nav } = useNav()
 const emit = defineEmits<{
   (e: 'click', item: { path: string }): void
 }>()
@@ -8,28 +10,12 @@ const emit = defineEmits<{
 const handleClick = (item: { path: string }) => {
   emit('click', item)
 }
-
-const navList = [
-  ...nav.value,
-  {
-    key: '',
-    label: 'light or dark',
-    path: '',
-    icon: 'material-symbols:home-rounded'
-  },
-  {
-    key: '',
-    label: 'language',
-    path: '',
-    icon: 'material-symbols:home-rounded'
-  }
-]
 </script>
 
 <template>
   <UPageList divide>
     <UPageCard
-      v-for="(item, index) in navList"
+      v-for="(item, index) in nav"
       @click="handleClick(item)"
       :key="index"
       variant="ghost"
@@ -37,6 +23,18 @@ const navList = [
     >
       <template #body>
         <UUser :name="item.label" size="xl" />
+      </template>
+    </UPageCard>
+    <UPageCard variant="ghost">
+      <template #body>
+        <div class="flex justify-between w-full">
+          <LocaleSelect class="w-full" />
+        </div>
+      </template>
+    </UPageCard>
+    <UPageCard variant="ghost">
+      <template #body>
+        <UColorModeSwitch />
       </template>
     </UPageCard>
   </UPageList>

@@ -18,5 +18,6 @@ const locales = computed(() => {
     :locales="locales"
     @update:model-value="(value) => setLocale(value as LocaleObject['code'])"
     class="w-48"
+    v-bind="$attrs"
   />
 </template>

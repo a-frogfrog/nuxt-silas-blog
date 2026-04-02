@@ -15,7 +15,13 @@
     "blog": "Blog",
     "about": "About",
     "projects": "Projects",
-    "me": "Me"
+    "me": "Me",
+    "mobile": {
+      "menu": {
+        "title": "Menu",
+        "description": "Navigate to the different sections of the blog"
+      }
+    }
   },
   "home": {
     "hi": "Hi, I am Silas or Froggy , you can call me"

@@ -18,7 +18,6 @@
     "i18n",
     "i18n/locales"
   ],
-  
   // Enable eslint for all supported languages
   "eslint.validate": [
     "javascript",
@@ -43,5 +42,6 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+  "i18n-ally.keystyle": "nested"
 }
