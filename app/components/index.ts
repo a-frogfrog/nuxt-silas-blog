@@ -8,6 +8,7 @@ export { default as Header } from './Header.vue'
 export { default as LocaleSelect } from './LocaleSelect.vue'
 export { default as Footer } from './Footer.vue'
 export { default as Empty } from './Empty.vue'
+export { default as SoundContainer } from './SoundContainer.vue'
 
 // Nav components and composables function
 export * from './nav'
