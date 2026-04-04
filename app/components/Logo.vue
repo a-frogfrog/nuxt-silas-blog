@@ -9,7 +9,7 @@ const avatarSrc = computed(() => {
 <template>
   <NuxtLink to="/">
     <div class="flex items-center">
-      <img class="h-20 w-20 rounded-full" :src="avatarSrc" role="logo" alt="avatar" />
+      <img class="h-20 w-20 rounded-full" :src="avatarSrc" role="logo" alt="logo" />
       <span class="font-bold first-letter:text-4xl first-letter:uppercase">{{
         t('app.title')
       }}</span>

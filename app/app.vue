@@ -45,12 +45,12 @@ function handleNavMobileListItemClick() {
                 </template>
               </NavMobile>
               <Nav v-else>
+                <template #left>
+                  <LocaleSelect />
+                </template>
                 <template #right>
                   <UColorModeSwitch />
                   <SoundSwitch />
-                </template>
-                <template #left>
-                  <LocaleSelect />
                 </template>
               </Nav>
             </ClientOnly>
