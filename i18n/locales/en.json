@@ -8,6 +8,7 @@
   },
   "app": {
     "title": "Silas's Little Nest",
+    "titleA11y": "return to home page",
     "description": "A blog about programming, technology, and life.",
     "empty": {
       "title": "This section is empty right now",
@@ -28,6 +29,16 @@
     }
   },
   "home": {
-    "hi": "Hi, I am Silas or Froggy , you can call me"
+    "hi": "Hi, I am Silas or Froggy , you can call me",
+    "title": "Home"
+  },
+  "blog": {
+    "title": "Blog"
+  },
+  "about": {
+    "title": "About"
+  },
+  "projects": {
+    "title": "Projects"
   }
 }

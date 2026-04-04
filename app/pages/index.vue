@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { t } = useI18n()
+
+useHead({
+  title: t('home.title')
+})
+</script>
 
 <template>
   <div class="flex flex-col items-center justify-center px-12 my-12">

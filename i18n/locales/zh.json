@@ -8,6 +8,7 @@
   },
   "app": {
     "title": "Silas 的小窝",
+    "titleA11y": "返回首页",
     "description": "关于 Silas 的小窝",
     "empty": {
       "title": "这里还什么都没有",
@@ -28,6 +29,16 @@
     }
   },
   "home": {
-    "hi": "你好，我是 Silas 或 Froggy , 你可以这样叫我"
+    "hi": "你好，我是 Silas 或 Froggy , 你可以这样叫我",
+    "title": "首页"
+  },
+  "blog": {
+    "title": "博客"
+  },
+  "about": {
+    "title": "关于"
+  },
+  "projects": {
+    "title": "项目"
   }
 }

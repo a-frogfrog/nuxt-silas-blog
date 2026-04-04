@@ -34,6 +34,7 @@ function handleNavMobileListItemClick() {
   <div class="h-screen">
     <SmoothScroll>
       <UApp>
+        <NuxtRouteAnnouncer />
         <NuxtLayout class="relative">
           <Background />
           <Header>
@@ -45,12 +46,12 @@ function handleNavMobileListItemClick() {
                 </template>
               </NavMobile>
               <Nav v-else>
+                <template #left>
+                  <LocaleSelect />
+                </template>
                 <template #right>
                   <UColorModeSwitch />
                   <SoundSwitch />
-                </template>
-                <template #left>
-                  <LocaleSelect />
                 </template>
               </Nav>
             </ClientOnly>

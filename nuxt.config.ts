@@ -9,7 +9,9 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'lenis/nuxt',
     'nuxt-gtag',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@nuxt/a11y',
+    'nuxt-purgecss'
   ],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -49,6 +51,11 @@ export default defineNuxtConfig({
       fallbackLocale: 'en'
     }
   },
+  a11y: {
+    enabled: process.env.NODE_ENV === 'development',
+    logIssues: true,
+    defaultHighlight: true
+  },
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
@@ -62,6 +69,9 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: `Silas's Little Nest`,
+      htmlAttrs: {
+        lang: 'en'
+      },
       meta: [
         {
           name: 'description',
