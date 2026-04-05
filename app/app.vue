@@ -9,8 +9,9 @@ import {
   NavMobile,
   NavMobileList,
   SmoothScroll,
-  Background,
-  SoundSwitch
+  SoundSwitch,
+  SoundRain,
+  Rain
 } from '~/components'
 import { useNavMobileProvider, useNavMobileState } from '~/components/nav/useNavMobile'
 
@@ -35,8 +36,11 @@ function handleNavMobileListItemClick() {
     <SmoothScroll>
       <UApp>
         <NuxtRouteAnnouncer />
+        <Rain />
+        <SoundRain />
+
         <NuxtLayout class="relative">
-          <Background />
+          <!-- <Background /> -->
           <Header>
             <Logo />
             <ClientOnly>
