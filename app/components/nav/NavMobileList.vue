@@ -24,7 +24,7 @@ const handleClick = (item: { path: string }) => {
     </UPageCard>
     <UPageCard variant="ghost">
       <template #body>
-        <div class="flex justify-between w-full">
+        <div class="flex w-full justify-between">
           <LocaleSelect class="w-full" />
         </div>
       </template>

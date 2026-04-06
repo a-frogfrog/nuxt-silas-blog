@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useHead({
-  title: t('projects.title')
+  title: t('page.projects.title')
 })
 </script>
 
