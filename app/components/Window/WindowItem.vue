@@ -25,6 +25,7 @@ const close = () => {
 <template>
   <ClientOnly>
     <Vue3DraggableResizable
+      :parent="true"
       :initW="initWidth / 1.5"
       :min-w="initWidth / 1.5"
       :initH="initHeight / 1.5"
