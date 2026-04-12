@@ -45,15 +45,22 @@ const close = () => {
       @activated="focus"
     >
       <div class="bg-default border-muted h-full w-full rounded-2xl border">
-        <div
-          class="border-default flex cursor-move items-center justify-between border-b px-4 py-2"
-        >
-          <div class="">{{ win.title }}</div>
-          <Icon class="cursor-pointer" role="button" @click="close" name="ic:twotone-cancel" />
-        </div>
-        <div class="p-2">
-          <component :is="win.component" />
-        </div>
+        <SoundContainer src="/sounds/click-2.mp3">
+          <div
+            class="border-default flex cursor-move items-center justify-between border-b px-4 py-2"
+          >
+            <div class="">{{ win.title }}</div>
+            <Icon
+              class="cursor-pointer"
+              role="button"
+              @click.capture="close"
+              name="ic:twotone-cancel"
+            />
+          </div>
+          <div class="p-2">
+            <component :is="win.component" />
+          </div>
+        </SoundContainer>
       </div>
     </Vue3DraggableResizable>
   </ClientOnly>
