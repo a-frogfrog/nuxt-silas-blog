@@ -6,8 +6,8 @@ const { t } = useI18n()
 <template>
   <USlideover
     v-model:open="open"
-    :title="t('nav.mobile.menu.title')"
-    :description="t('nav.mobile.menu.description')"
+    :title="t('app.nav.mobile.menu.title')"
+    :description="t('app.nav.mobile.menu.description')"
     placement="right"
   >
     <Icon name="material-symbols:menu-rounded" class="size-8" />

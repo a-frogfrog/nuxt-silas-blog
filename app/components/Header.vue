@@ -1,11 +1,4 @@
-<script setup lang="ts">
-const b = 'b'
-const d = 'd'
-const obj = {
-  b,
-  d
-}
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <SoundContainer>

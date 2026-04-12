@@ -33,7 +33,13 @@ function handleNavMobileListItemClick() {
         <SoundRain />
 
         <NuxtLayout class="relative">
-          <!-- <Background /> -->
+          <Background />
+
+          <Teleport to="body">
+            <AppLoading />
+            <WindowManager />
+          </Teleport>
+
           <Header>
             <Logo />
             <ClientOnly>
@@ -54,6 +60,7 @@ function handleNavMobileListItemClick() {
             </ClientOnly>
           </Header>
           <main class="pb-4">
+            <NuxtLoadingIndicator :height="3" color="#3b82f6" />
             <NuxtPage />
           </main>
         </NuxtLayout>

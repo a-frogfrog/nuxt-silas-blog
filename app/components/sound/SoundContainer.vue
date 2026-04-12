@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { useEventListener } from '@vueuse/core'
-import { useSound } from '@vueuse/sound'
-
 import { useSoundState } from './useSound'
 
 interface Props {
