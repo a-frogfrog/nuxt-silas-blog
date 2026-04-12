@@ -16,8 +16,16 @@ export default defineNuxtConfig({
     'nuxt-gtag',
     '@vueuse/nuxt',
     '@nuxt/a11y',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    '@nuxt/fonts'
   ],
+
+  fonts: {
+    families: [
+      { name: 'Inter', provider: 'google' },
+      { name: 'Maple Mono', src: '/fonts/MapleMono-NF-CN-Regular.ttf' }
+    ]
+  },
 
   colorMode: {
     classSuffix: '', // 不要 -mode 后缀（推荐）
@@ -89,11 +97,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'
-        }
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
       ]
     }
   }
