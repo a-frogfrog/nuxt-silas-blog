@@ -31,11 +31,12 @@ function handleNavMobileListItemClick() {
         <NuxtRouteAnnouncer />
         <Rain />
         <SoundRain />
-        <AppLoading />
+
         <NuxtLayout class="relative">
           <Background />
 
           <Teleport to="body">
+            <AppLoading />
             <WindowManager />
           </Teleport>
 

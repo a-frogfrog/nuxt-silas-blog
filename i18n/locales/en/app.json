@@ -17,5 +17,6 @@
         "description": "Navigate to the different sections of the blog"
       }
     }
-  }
+  },
+  "loading": "Loading"
 }

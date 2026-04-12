@@ -3,7 +3,7 @@ import { useWindowSize } from '@vueuse/core'
 import Vue3DraggableResizable from 'vue3-draggable-resizable'
 
 interface Props {
-  win: Omit<WindowInstance, 'component'>
+  win: WindowInstance
 }
 
 const { width: initWidth, height: initHeight } = useWindowSize()
@@ -43,15 +43,15 @@ const close = () => {
       classNameDragging="border border-default"
       @activated="focus"
     >
-      <div class="bg-default h-full w-full rounded-2xl border border-gray-300">
+      <div class="bg-default border-muted h-full w-full rounded-2xl border">
         <div
           class="border-default flex cursor-move items-center justify-between border-b px-4 py-2"
         >
           <div class="">{{ win.title }}</div>
           <Icon class="cursor-pointer" role="button" @click="close" name="ic:twotone-cancel" />
         </div>
-        <div>
-          <slot body />
+        <div class="p-2">
+          <component :is="win.component" />
         </div>
       </div>
     </Vue3DraggableResizable>

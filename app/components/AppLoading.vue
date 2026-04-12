@@ -5,6 +5,8 @@ const nuxtApp = useNuxtApp()
 const loaderRef = useTemplateRef('loaderRef')
 const contentRef = useTemplateRef('contentRef')
 
+const { t } = useI18n()
+
 // 进场动画：页面开始加载，遮罩层从下方滑入
 const playIn = () => {
   if (!loaderRef.value) return
@@ -73,7 +75,9 @@ onMounted(() => {
           class="h-12 w-12 animate-spin rounded-full border-4 border-blue-500 border-t-transparent"
         ></div>
       </div>
-      <h1 class="mt-6 text-sm font-light tracking-[0.3em] text-slate-400 uppercase">Loading</h1>
+      <h1 class="mt-6 text-sm font-light tracking-[0.3em] text-slate-400 uppercase">
+        {{ t('app.loading') }}
+      </h1>
     </div>
   </div>
 </template>

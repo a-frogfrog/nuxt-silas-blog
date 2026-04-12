@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BlogPage from '~/pages/about/index.vue'
 const { t } = useI18n()
 useSeoMeta({
   title: t(`${$t('app.title')} - ${t('page.home.title')}`),
@@ -18,19 +19,11 @@ const { openWindow } = useWindowManager()
       @click="
         openWindow({
           id: Date.now().toString(),
-          title: 'Test Window1'
+          title: 'Blog',
+          component: BlogPage
         })
       "
-      >Open Window1</UButton
-    >
-    <UButton
-      @click="
-        openWindow({
-          id: Date.now().toString(),
-          title: 'Test Window2'
-        })
-      "
-      >Open Window2</UButton
+      >Open Blog</UButton
     >
   </div>
 </template>
