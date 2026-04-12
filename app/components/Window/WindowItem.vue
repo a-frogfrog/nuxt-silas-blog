@@ -2,17 +2,17 @@
 import { useWindowSize } from '@vueuse/core'
 import Vue3DraggableResizable from 'vue3-draggable-resizable'
 
+const { isOpen } = useWindowManager()
 const { width, height } = useWindowSize()
 function print(val: string) {
   console.log(val)
 }
 
-const { x, y, h, w, active } = reactive({
+const { x, y, h, w } = reactive({
   x: 100,
   y: 100,
   h: 100,
-  w: 100,
-  active: false
+  w: 100
 })
 </script>
 
@@ -27,7 +27,7 @@ const { x, y, h, w, active } = reactive({
       v-model:y="y"
       v-model:w="w"
       v-model:h="h"
-      v-model:active="active"
+      v-model:active="isOpen"
       :draggable="true"
       :resizable="true"
       classNameActive="bg-primary"
