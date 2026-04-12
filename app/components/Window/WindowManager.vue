@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import 'vue3-draggable-resizable/dist/Vue3DraggableResizable.css'
 const { windows } = useWindowManager()
 </script>
 

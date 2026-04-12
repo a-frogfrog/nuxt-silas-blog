@@ -3,7 +3,6 @@
 @import './transition.css';
 @import './nprogress.css';
 @import './scrollbar.css';
-@import 'vue3-draggable-resizable/dist/Vue3DraggableResizable.css';
 
 body {
   font-family: 'Maple Mono', 'Inter';

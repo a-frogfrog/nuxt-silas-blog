@@ -9,16 +9,16 @@ interface Props {
 const { width: initWidth, height: initHeight } = useWindowSize()
 const props = defineProps<Props>()
 
-const { closeWindow } = useWindowManager()
+const { focusWindow, closeWindow } = useWindowManager()
 
 const active = ref(false)
 
-const close = () => {
-  closeWindow(props.win.id)
+const focus = () => {
+  focusWindow(props.win.id)
 }
 
-function print(val: string) {
-  console.log(val)
+const close = () => {
+  closeWindow(props.win.id)
 }
 </script>
 
@@ -34,23 +34,19 @@ function print(val: string) {
       v-model:w="win.w"
       v-model:h="win.h"
       v-model:active="active"
+      :style="{ zIndex: win.z }"
       :draggable="true"
       :resizable="true"
       classNameActive="bg-primary"
       classNameHandle="border-red-300"
       classNameResizable="border border-default"
       classNameDragging="border border-default"
-      @activated="print('activated')"
-      @deactivated="print('deactivated')"
-      @drag-start="print('drag-start')"
-      @resize-start="print('resize-start')"
-      @dragging="print('dragging')"
-      @resizing="print('resizing')"
-      @drag-end="print('drag-end')"
-      @resize-end="print('resize-end')"
+      @activated="focus"
     >
-      <div class="bg-default h-full w-full">
-        <div class="border-default flex items-center justify-between border-b px-4 py-2">
+      <div class="bg-default h-full w-full rounded-2xl border border-gray-300">
+        <div
+          class="border-default flex cursor-move items-center justify-between border-b px-4 py-2"
+        >
           <div class="">{{ win.title }}</div>
           <Icon class="cursor-pointer" role="button" @click="close" name="ic:twotone-cancel" />
         </div>

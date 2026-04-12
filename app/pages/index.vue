@@ -8,7 +8,7 @@ useSeoMeta({
   ogDescription: t('app.description'),
   twitterDescription: t('app.description')
 })
-const { openWindow } = _useWindowManager()
+const { openWindow } = useWindowManager()
 </script>
 
 <template>
@@ -18,10 +18,19 @@ const { openWindow } = _useWindowManager()
       @click="
         openWindow({
           id: Date.now().toString(),
-          title: 'Test Window'
+          title: 'Test Window1'
         })
       "
-      >Open Window</UButton
+      >Open Window1</UButton
+    >
+    <UButton
+      @click="
+        openWindow({
+          id: Date.now().toString(),
+          title: 'Test Window2'
+        })
+      "
+      >Open Window2</UButton
     >
   </div>
 </template>

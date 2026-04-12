@@ -19,10 +19,8 @@ export const useWindowManager = () => {
     zIndex.value++
     windows.value.push({
       ...win,
-      id: Date.now().toString(),
       z: zIndex.value
     })
-    console.log(windows.value)
   }
 
   const focusWindow = (id: string) => {
@@ -31,6 +29,7 @@ export const useWindowManager = () => {
 
     zIndex.value++
     win.z = zIndex.value
+    console.log(windows.value)
   }
 
   const closeWindow = (id: string) => {
