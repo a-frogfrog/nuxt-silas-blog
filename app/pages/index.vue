@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import LayoutSwitcher from '~/components/Settings/LayoutSwitcher.vue'
 import AboutPage from '~/pages/about/index.vue'
 import BlogPage from '~/pages/blog/index.vue'
 import ProjectsPage from '~/pages/projects/index.vue'
@@ -34,6 +35,8 @@ const openPageWindow = (key: OpenPageWindowType) => {
 <template>
   <div class="my-12 flex flex-col items-center justify-center px-12">
     <UPageHero title="Silas or Froggy" :description="$t('page.home.hi')" />
+
+    <LayoutSwitcher />
 
     <div class="flex gap-3">
       <LinearButton @click="openPageWindow('blog')">
