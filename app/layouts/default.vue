@@ -25,7 +25,7 @@ function handleNavMobileListItemClick() {
       <UApp>
         <NuxtRouteAnnouncer />
         <div class="relative flex min-h-dvh w-full overflow-hidden">
-          <VerticalHeader v-if="dock === 'left'" :dock="dock" class="w-[260px] shrink-0">
+          <VerticalHeader v-if="dock === 'left'" :dock="dock" class="w-65 shrink-0">
             <Logo />
             <ClientOnly>
               <NavMobile v-if="isMobile">
@@ -53,7 +53,7 @@ function handleNavMobileListItemClick() {
             <Footer />
           </main>
 
-          <VerticalHeader v-if="dock === 'right'" :dock="dock" class="w-[260px] shrink-0">
+          <VerticalHeader v-if="dock === 'right'" :dock="dock" class="w-65 shrink-0">
             <Logo />
             <ClientOnly>
               <NavMobile v-if="isMobile">
