@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import VerticalHeader from '~/components/Header/VerticalHeader.vue'
 const { t } = useI18n()
-const { isMobile } = useDevice()
-const { dock } = useHeaderDock()
 
 useSeoMeta({
   title: t('app.title'),
@@ -17,13 +14,6 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   robots: 'index, follow'
 })
-
-useNavMobileProvider()
-const { open } = useNavMobileState() || { open: ref(false) }
-
-function handleNavMobileListItemClick() {
-  open.value = false
-}
 </script>
 
 <template>

@@ -2,6 +2,13 @@
 import VerticalHeader from '~/components/Header/VerticalHeader.vue'
 const { dock } = useHeaderDock()
 const { isMobile } = useDevice()
+
+useNavMobileProvider()
+const { open } = useNavMobileState() || { open: ref(false) }
+
+function handleNavMobileListItemClick() {
+  open.value = false
+}
 </script>
 
 <template>
