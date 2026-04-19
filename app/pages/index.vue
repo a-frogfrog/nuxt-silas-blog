@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import LayoutSwitcher from '~/components/Settings/LayoutSwitcher.vue'
 import AboutPage from '~/pages/about/index.vue'
 import BlogPage from '~/pages/blog/index.vue'
 import ProjectsPage from '~/pages/projects/index.vue'
@@ -20,8 +19,6 @@ const { openWindow } = useWindowManager()
 type OpenPageWindowType = 'blog' | 'projects' | 'about'
 const openPageWindow = (key: OpenPageWindowType) => {
   let component
-  const title = t(`page.${key}.title`)
-
   if (key === 'blog') component = BlogPage
   if (key === 'projects') component = ProjectsPage
   if (key === 'about') component = AboutPage
@@ -37,8 +34,6 @@ const openPageWindow = (key: OpenPageWindowType) => {
 <template>
   <div class="my-12 flex flex-col items-center justify-center px-12">
     <UPageHero title="Silas or Froggy" :description="$t('page.home.hi')" />
-
-    <LayoutSwitcher />
 
     <div class="flex gap-3">
       <LinearButton @click="openPageWindow('blog')">
