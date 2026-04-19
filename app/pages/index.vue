@@ -14,17 +14,11 @@ useSeoMeta({
   twitterDescription: t('app.description')
 })
 
-definePageMeta({
-  // Layout: 'vertical-header'
-})
-
 const { openWindow } = useWindowManager()
 
 type OpenPageWindowType = 'blog' | 'projects' | 'about'
 const openPageWindow = (key: OpenPageWindowType) => {
   let component
-  const title = t(`page.${key}.title`)
-
   if (key === 'blog') component = BlogPage
   if (key === 'projects') component = ProjectsPage
   if (key === 'about') component = AboutPage

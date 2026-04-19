@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import VerticalContentHeader from '~/components/Header/VerticalContentHeader.vue'
 import VerticalHeader from '~/components/Header/VerticalHeader.vue'
-const { dock, setHeaderDock } = _useHeaderDock()
+const { dock } = useHeaderDock()
 
 useNavMobileProvider()
-onMounted(() => {
-  setHeaderDock('right')
-})
 </script>
 
 <template>
